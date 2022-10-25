@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../providers/firebase';
 import { ModalController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { FirebaseService } from '../providers/firebase';
 import { CarrinhoPage } from './carrinho/carrinho.page';
 import { HistoricoPage } from './historico/historico.page';
 

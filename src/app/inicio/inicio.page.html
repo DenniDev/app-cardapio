@@ -13,31 +13,59 @@
 
 <!-- Content -->
 <ion-content [fullscreen]="true" *ngIf="loaded">
-  <div id="container">
-    <!-- Card de promocão -->
-    <div class="promoCard"  [style.background]="'url(' + firebase.config.banner + ')'"></div>
+  <div class="myClass">
+    <ion-card>
+      <img src="assets/promocoes.png" width="100%"/>
+      <div class="card-title">Promoções</div>
+      <div class="card-subtitle">Acompanhe as promoções do dia</div>
+    </ion-card>
 
-    <!-- Categorias -->
-    <ion-list *ngFor="let c of categorias" style="margin-top: 20px;" mode="ios">
-      <ion-list-header style="margin-bottom: 15px; color: #fff" [style.background-color]="firebase.config.color">
-        {{c.titulo}}
-      </ion-list-header>
+  <ion-grid>
+  <ion-row>
+    <ion-col>
 
-      <!-- Produtos -->
-      <ion-item *ngFor="let p of c.produtos" lines='none' (click)="detalhesDoProduto(p)">
-        <ion-row style="width: 100%;">
-          <ion-col size="4">
-            <div class="produtoImagem" [style.background]="'url(' + p.imagem + ')'"></div>
-          </ion-col>
-          <ion-col size="8">
-            <ion-label style="overflow:visible !important; color: rgb(61, 61, 61); font-size: 15px;">{{p.titulo}}</ion-label>
-            <p style="color: rgb(85, 85, 85); font-size: 11px; margin-top: 0px; margin-bottom: 0px; width: 100%;">{{p.descricao}}</p>
-            <p  [style.color]="firebase.config.color" style="font-size: 10px; position: relative; top: -5px">R${{p.preco}}</p>
-          </ion-col>
-        </ion-row>
-      </ion-item>
+        <ion-item (click)="cadapio()" class="ion-activated">
+          <div class="ion-text-center">
+            <img src="assets/cardapio.png">
+            <h3>Cardápio</h3>
+          </div>
+        </ion-item>
 
-    
-    </ion-list>
-  </div>
+      </ion-col>
+    <ion-col>
+
+        <ion-item class="ion-activated">
+          <div class="ion-text-center">
+            <img src="assets/eventos.png">
+            <h3>Eventos</h3>
+          </div>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+
+          <ion-item (click)="carrinho()" class="ion-activated">
+            <div class="ion-text-center">
+              <img src="assets/acompanhar-pedido.png">
+              <h3>Acompanhar pedido</h3>
+            </div>
+          </ion-item>
+
+    </ion-col>
+    <ion-col>
+
+        <ion-item href="#" class="ion-activated">
+          <div class="ion-text-center">
+            <img src="assets/qr-code.png">
+            <h3>Sobre nós</h3>
+          </div>
+        </ion-item>
+
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>

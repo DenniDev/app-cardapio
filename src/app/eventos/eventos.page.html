@@ -1,0 +1,38 @@
+<!-- Header -->
+<ion-header [translucent]="false" collapse="undefined" mode="ios" [style.background-color]="firebase.config.color">
+  <ion-toolbar [style.background-color]="firebase.config.color">
+    <ion-buttons slot="start" (click)="fechar()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-back-outline"   [style.color]="firebase.config.color">  </ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title size="large" style="text-align: center; font-size: 18px; "   [style.color]="firebase.config.color">
+      Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="loaded">
+
+  <ion-list style="margin-top: 20px;" mode="ios">
+    <ion-item>
+      <ion-slides>
+        <ion-slide *ngFor="let e of eventos">
+          <div class="slide">
+            <img id="img" src="{{e.imagem}}"  />
+            <h2>{{e.titulo}}</h2>
+            <dl>
+              <dt>Informações importantes</dt>
+              <dd> Data: <strong>{{e.data}}</strong></dd>
+              <dd> Artista: {{e.artista}}</dd>
+            </dl>
+            <p>
+              {{e.descricao}}
+            </p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
+</ion-content>

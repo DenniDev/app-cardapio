@@ -1,0 +1,38 @@
+
+<!-- Header -->
+<ion-header [translucent]="false" collapse="undefined" mode="ios" [style.background-color]="firebase.config.color">
+  <ion-toolbar [style.background-color]="firebase.config.color">
+    <ion-buttons slot="start" (click)="fechar()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="chevron-back-outline"   [style.color]="firebase.config.color">  </ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title size="large" style="text-align: center; font-size: 18px; "   [style.color]="firebase.config.color">
+      Suporte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Informações</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Numero - 21 94052-1263<br>
+      Email - Barzin123@gmail.com<br>
+      Local - Rua Tal Fulano de tal<br>
+      CEP - 25256-355
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Suporte</ion-card-title>
+    </ion-card-header>
+      <ion-item>
+        <ion-textarea placeholder="Escreva aqui seu feedback!!!" [autoGrow]="true"></ion-textarea>
+        <ion-button shape="round">Enviar</ion-button>
+      </ion-item>
+  </ion-card>
+</ion-content>

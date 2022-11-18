@@ -1,0 +1,74 @@
+<!-- Header -->
+<ion-header [translucent]="true" *ngIf="loaded" collapse="undefined" mode="ios">
+  <ion-toolbar id="toolbar" [style.background-color]="firebase.config.colo">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title size="large" style="height: 60px; text-align: center;">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Content -->
+<ion-content [fullscreen]="true" *ngIf="loaded" class="card-background-page">
+  <div class="myClass">
+    <div>
+      <h2 id="text-prom"><strong>Faça o seu pedido</strong></h2>
+    </div>
+    <ion-card id="card-prom">
+      <img id="img-prom" src="../../assets/imagens/promoção do dia.jpeg"/>
+      <div class="card-title">Promoções</div>
+      <div class="card-subtitle">Acompanhe as promoções do dia</div>
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <ion-item (click)="cadapio()" class="ion-activated">
+            <div class="ion-text-center">
+              <img class="img2" src="../../assets/icon/cardapio.png">
+              <h2 class="text-opicoes">Cardápio</h2>
+            </div>
+          </ion-item>
+
+        </ion-col>
+        <ion-col>
+
+          <ion-item (click)="eventos()" class="ion-activated">
+            <div class="ion-text-center">
+              <img style="margin-left: 43px;" class="img" src="../../assets/icon/evento.png">
+              <h3 style="margin-left: 40px;" class="text-opicoes">Eventos</h3>
+            </div>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+
+          <ion-item style="margin-top: 10px;" (click)="carrinho()" class="ion-activated">
+            <div class="ion-text-center">
+              <img class="img" src="../../assets/icon/carrinho.png">
+              <h2 style="margin-left: 37px;" class="text-opicoes">Carrinho</h2>
+            </div>
+          </ion-item>
+
+        </ion-col>
+        <ion-col>
+
+          <ion-item style="margin-top: 10px;" (click)="suporte()" class="ion-activated">
+            
+            <div class="ion-text-center">
+              <img style="margin-left: 43px;" class="img" src="../../assets/icon/suporte.png">
+              <h2 style="margin-left: 40px;" class="text-opicoes">Suporte</h2>
+            </div>
+    
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
